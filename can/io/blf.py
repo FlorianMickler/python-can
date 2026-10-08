@@ -546,7 +546,7 @@ class BLFWriter(BinaryIOMessageWriter):
         base_header = OBJ_HEADER_BASE_STRUCT.pack(
             b"LOBJ", header_size, 1, obj_size, obj_type
         )
-        obj_header = OBJ_HEADER_V1_STRUCT.pack(TIME_ONE_NANS, 0, 0, max(timestamp, 0))
+        obj_header = OBJ_HEADER_V1_STRUCT.pack(TIME_ONE_NANS, 0, 0, timestamp)
 
         self._buffer.append(base_header)
         self._buffer.append(obj_header)

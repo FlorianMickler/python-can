@@ -24,10 +24,9 @@ from itertools import zip_longest
 from pathlib import Path
 from unittest.mock import patch
 
-from parameterized import parameterized
-
 import can.io
 from can.io import asc, blf
+from parameterized import parameterized
 
 from .data.example_data import (
     TEST_COMMENTS,
